@@ -5,7 +5,12 @@ def insertion_sort(list_to_sort):
 
 """Regular selection sort algorithm"""
 def selection_sort(list_to_sort):
-    pass
+    my_temp_list = []
+
+    for i in range(0, len(list_to_sort)):
+        
+
+    list_to_sort = my_temp_list
 
 """Inefficient regular bubble sort""" 
 def bubble_sort(list_to_sort):
