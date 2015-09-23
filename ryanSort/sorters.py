@@ -5,12 +5,17 @@ def insertion_sort(list_to_sort):
 
 """Regular selection sort algorithm"""
 def selection_sort(list_to_sort):
-    my_temp_list = []
-
-    for i in range(0, len(list_to_sort)):
-        
-
-    list_to_sort = my_temp_list
+    this_index = 0
+    for j in range(0, len(list_to_sort)):
+        min_index = j
+        for i in range(this_index+1, len(list_to_sort)):
+            if list_to_sort[i] < list_to_sort[min_index]:
+                min_index = i
+        if(min_index != j):
+            temp_value = list_to_sort[j]
+            list_to_sort[j] = list_to_sort[min_index]
+            list_to_sort[min_index] = temp_value
+        this_index+=1
 
 """Inefficient regular bubble sort""" 
 def bubble_sort(list_to_sort):

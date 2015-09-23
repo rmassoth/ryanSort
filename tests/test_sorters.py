@@ -1,4 +1,5 @@
 import random
+import copy
 from ryanSort import sorters
 
 #list used for sorting
@@ -15,5 +16,12 @@ def sorted(list_to_check):
     return True
 
 def test_bubble_sort():
-    sorters.bubble_sort(my_list)
-    assert sorted(my_list)
+    this_list = my_list.copy()
+    sorters.bubble_sort(this_list)
+    assert sorted(this_list)
+
+
+def test_selection_sort():
+    this_list = my_list.copy()
+    sorters.selection_sort(this_list)
+    assert sorted(this_list)
