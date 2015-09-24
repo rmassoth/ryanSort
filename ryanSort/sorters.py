@@ -1,7 +1,13 @@
 
-
+"""Insertion sorting algorithm"""
 def insertion_sort(list_to_sort):
-    pass
+    for i in range(1, len(list_to_sort)):
+        j = i
+        while j >0 and list_to_sort[j-1] > list_to_sort[j]:
+            temp_value = list_to_sort[j]
+            list_to_sort[j] = list_to_sort[j-1]
+            list_to_sort[j-1] = temp_value
+            j = j-1
 
 """Regular selection sort algorithm"""
 def selection_sort(list_to_sort):
